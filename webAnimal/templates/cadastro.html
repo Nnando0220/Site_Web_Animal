@@ -1,0 +1,239 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+    Cadastro visitante
+{% endblock %}
+
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="​&nbsp;POSTAR, Título da Postagem 6, Título da Postagem 5, Título da Postagem 4, INTUITIVE">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'Cadastrar.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery-1.9.1.min.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 5.13.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "/",
+		"logo": "{% static 'images/default-logo.png' %}",
+		"sameAs": []
+    }</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Página Inicial">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="/">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+    <script>
+          const phoneMask = (value) => {
+                const cleanValue = value.replace(/\D/g, '');
+                const formattedValue = cleanValue.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            return formattedValue;
+          }
+          const handlePhone = (event) => {
+                let input = event.target;
+                input.value = phoneMask(input.value);
+          }
+    </script>
+    <style>
+        .d-none {
+            display: none;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <body class="u-body u-xl-mode" data-lang="pt"><header class="u-black u-clearfix u-header u-header" id="sec-0ced" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <a href="/" class="u-image u-logo u-image-1" data-image-width="80" data-image-height="40">
+              <img src="{% static '/default-logo.png' %}" class="u-logo-image u-logo-image-1">
+            </a>
+            <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+              <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+                <a class="u-button-style u-custom-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+                  <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+                  <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+    </g></svg>
+                </a>
+              </div>
+              <div class="u-custom-menu u-nav-container">
+                <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-white" href="/" style="padding: 10px 20px;">Página Inicial</a>
+    </li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-white" href="/membros" style="padding: 10px 20px;">Membros</a>
+    </li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-white" href="/cadastro" style="padding: 10px 20px;">Cadastrar</a>
+    </li></ul>
+              </div>
+              <div class="u-custom-menu u-nav-container-collapse">
+                <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                  <div class="u-inner-container-layout u-sidenav-overflow">
+                    <div class="u-menu-close"></div>
+                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/">Página Inicial</a>
+    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/membros">Membros</a>
+    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/cadastro">Cadastrar</a>
+    </li></ul>
+                  </div>
+                </div>
+                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+              </div>
+            </nav>
+          </div>
+    </header>
+    <section class="u-align-center u-clearfix u-grey-5 u-section-1" id="sec-9261">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">TORNE-SE MEMBRO</h1>
+        <div class="u-form u-form-1">
+          <form method="post" action="{% url 'cadastro' %}" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 40px;" name="form" id="cadastro-form">
+            {% csrf_token %}
+            <div class="u-form-group u-form-name u-label-none">
+              <label for="nome" class="u-label">Nome</label>
+              <input type="text" placeholder="Primeiro nome" id="nome" name="nome" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="">
+            </div>
+            <div class="u-form-email u-form-group u-label-none">
+              <label for="sobrenome" class="u-label">Email</label>
+              <input type="text" placeholder="Último nome" id="sobrenome" name="sobrenome" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2" required="">
+            </div>
+            <div class="u-form-group u-label-none u-form-group-3">
+              <label for="tel" class="u-label">Telefone</label>
+              <input maxlength="17" onkeyup="handlePhone(event)" type="tel" id="tel" name="tel" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3" required="required" placeholder="Telefone">
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+                <button type="button" class="u-btn u-btn-submit u-button-style" id="cadastro-btn">Cadastrar</button>
+                <input type="#" value="submit" class="u-form-control-hidden">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="messages-container">
+            {% for message in messages %}
+                {% if message.tags == 'error' %}
+                    <div class="u-form-send-error u-form-send-message">{{ message }}</div>
+                {% elif message.tags == 'success' %}
+                    <div class="u-form-send-message u-form-send-success">{{ message }}</div>
+                {% endif %}
+          {% endfor %}
+      </div>
+    </section>
+    <script defer="">
+        document.addEventListener("DOMContentLoaded", function (){
+            const form = document.getElementById("cadastro-form");
+            const messagesContainer = document.getElementById("messages-container");
+            const cadastroBtn = document.getElementById("cadastro-btn");
+            let name = "";
+            cadastroBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "X-CSRFToken": getCookie("csrftoken"),
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+
+                    messagesContainer.innerHTML = "";
+
+                    if (data.success) {
+                        const successMessage = document.createElement("div");
+                        successMessage.classList.add("u-form-send-success");
+                        successMessage.textContent = data.message;
+                        messagesContainer.appendChild(successMessage);
+                        hideMessage(successMessage);
+                    } else {
+                        const errorMessage = document.createElement("div");
+                        errorMessage.classList.add("u-form-send-error");
+                        errorMessage.textContent = data.message;
+                        messagesContainer.appendChild(errorMessage);
+                        hideMessage(errorMessage);
+                    }
+
+                    hideMessage(name);
+                })
+                .catch(error => console.error(error));
+            });
+
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+
+            function hideMessage(messageElement) {
+
+            if (!messageElement || !messageElement.classList) {
+                return;
+            }
+
+            const classes = [...messageElement.classList];
+
+            for (let classe of classes) {
+                if (classe.startsWith('u-form-send-')) {
+                    const messages = document.querySelectorAll(`.${classe}`);
+                    messages.forEach(message => {
+                        setTimeout(() => {
+                            message.classList.add('d-none');
+                        }, 5000);
+                    });
+                    break;
+                }
+            }
+        }
+            hideMessage();
+        });
+    </script>
+{% endblock %}
+{% block footer %}
+    <footer class="u-clearfix u-footer u-grey-80" id="sec-27ad"><div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <a href="/" class="u-image u-logo u-image-1" data-image-width="80" data-image-height="40">
+                    <img src="{% static '/default-logo.png' %}" class="u-logo-image u-logo-image-1">
+                  </a>
+                </div>
+              </div>
+              <div class="u-align-center-sm u-align-center-xs u-align-left-md u-align-right-lg u-align-right-xl u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                  <div class="u-social-icons u-spacing-10 u-social-icons-1">
+                    <a class="u-social-url" title="linkedin" target="_blank" href=""><span class="u-file-icon u-icon u-social-icon u-social-linkedin u-icon-1"><img src="{%static '/3536505.png'%}" alt=""></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" data-type="Github" title="Github" href=""><span class="u-file-icon u-icon u-social-github u-social-icon u-icon-2"><img src="{%static '/11023876.png'%}" alt=""></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+        <a class="u-link" href="/" target="_blank">
+        <span>WEB Animal</span>
+      </a>
+      <p class="u-text">
+        <span>feito</span>
+      </p>
+        <span>por Fernando</span>.
+    </section>
+{% endblock %}
+

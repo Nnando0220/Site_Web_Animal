@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+    <head>
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        <title>{% block title %}{% endblock %}</title>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            {% block footer %}
+            {% endblock %}
+        </footer>
+    </body>
+</html>
