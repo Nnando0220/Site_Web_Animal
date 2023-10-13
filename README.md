@@ -47,4 +47,4 @@ Contribuições são bem-vindas! Se você encontrar algum problema ou quiser adi
 
 ## Autor
 
-Seu Fernando Oliveira do Nascimento
+Fernando Oliveira do Nascimento
